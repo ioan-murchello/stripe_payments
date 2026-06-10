@@ -5,15 +5,7 @@ import { AlertCircle, Copy } from "lucide-react";
 import { toast } from "sonner";
 
 export function StripeTestNotice() {
-  // Check if your public Stripe key is a test key (starts with pk_test)
-  const isStripeTestMode =
-    process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY?.startsWith("pk_test_");
-
-  // 🌍 CHANGED: Now it shows on production/uploaded sites IF you are still using Stripe Test Mode
-  if (!isStripeTestMode && process.env.NODE_ENV !== "development") {
-    return null;
-  }
-
+  
   // Dynamically calculate next year (e.g., in 2026, this becomes '27')
   const nextYearShort = String(new Date().getFullYear() + 1).slice(-2);
   const cardNumber = "4242 4242 4242 4242";
@@ -25,14 +17,14 @@ export function StripeTestNotice() {
   };
 
   return (
-    <div className="fixed bottom-4 right-4 w-full max-w-md mx-auto rounded-xl border border-amber-200 bg-amber-500 p-4 text-amber-900 shadow-sm z-[300]">
+    <div className="fixed bottom-0 right-0 sm:bottom-4 sm:right-4 w-full max-w-md mx-auto rounded-xl border border-amber-200 bg-amber-500 p-4 text-amber-900 shadow-sm z-[300]">
       <div className="flex items-start gap-3">
         <AlertCircle className="mt-0.5 size-5 flex-shrink-0 text-amber-600" />
         <div className="flex-1 space-y-2">
-          <p className="text-sm font-semibold leading-none text-amber-800">
+          <p className="hidden sm:block text-sm font-semibold leading-none text-amber-800">
             Payment Test Mode Active
           </p>
-          <p className="text-xs text-amber-700/90 leading-relaxed">
+          <p className="hidden sm:block text-xs text-amber-700/90 leading-relaxed">
             Use the following credentials on the Stripe Checkout page to
             simulate a successful payment:
           </p>

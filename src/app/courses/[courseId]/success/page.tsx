@@ -37,7 +37,7 @@ const SuccessPage = async ({
           </div>
           <div className="flex justify-center gap-4">
             <Link href={`/courses/${courseId}`}>
-              <Button className="w-full sm:w-auto flex items-center justify-center">
+              <Button variant="outline" className="w-full sm:w-auto flex items-center justify-center">
                 Go to Course
               </Button>
             </Link>

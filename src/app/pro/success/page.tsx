@@ -29,7 +29,7 @@ const SuccessPageContent = () => {
             ];
 
     return (
-        <div className='container mx-auto px-4 py-8 md:py-16 max-w-4xl h-screen'>
+        <div className='container mx-auto px-4 py-8 md:py-16 max-w-4xl h-full'>
             <Card className='w-full overflow-hidden'>
                 <div
                     className={`w-full h-2 ${isYearly ? "bg-gradient-to-r from-purple-500 to-pink-500" : "bg-blue-500"}`}
@@ -85,7 +85,7 @@ const SuccessPageContent = () => {
 export default function SuccessPage() {
     return (
         <Suspense fallback={
-            <div className="flex h-screen w-full items-center justify-center">
+            <div className="flex h-full w-full items-center justify-center">
                 <p className="text-lg text-muted-foreground animate-pulse">Loading order details...</p>
             </div>
         }>

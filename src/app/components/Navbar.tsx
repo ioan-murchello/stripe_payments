@@ -17,12 +17,12 @@ import { Button } from "@/components/ui/button";
 
 const Navbar = () => {
   return (
-    <nav className="max-w-[1560px] mx-auto flex justify-between items-center py-4 px-6 bg-background border-b">
+    <nav className="max-w-[1560px] mx-auto flex justify-between items-center py-4 px-3 sm:px-6 bg-background border-b">
       <Link
         href={"/"}
         className="text-xl font-extrabold text-primary flex items-center gap-2"
       >
-        <span className="hidden sm:inline">MasterClass</span> <GraduationCap className="size-6" />
+        <span className="hidden sm:inline">MasterClass</span> <GraduationCap className="size-7" />
       </Link>
 
       <div className="flex items-center space-x-2 sm:space-x-4">
@@ -30,7 +30,7 @@ const Navbar = () => {
           href={"/courses"}
           className="flex items-center gap-1 px-3 py-2 rounded-md text-muted-foreground hover:text-primary hover:bg-secondary transition-colors"
         >
-          <BookOpenIcon className="size-4" />
+          <BookOpenIcon className="size-6" />
           <span className="hidden sm:inline">Courses</span>
         </Link>
 
@@ -38,7 +38,7 @@ const Navbar = () => {
           href={"/pro"}
           className="flex items-center gap-1 px-3 py-2 rounded-md text-muted-foreground hover:text-primary hover:bg-secondary transition-colors"
         >
-          <ZapIcon className="size-4" />
+          <ZapIcon className="size-6" />
           <span className="hidden sm:inline">Pro</span>
         </Link>
 
@@ -48,7 +48,7 @@ const Navbar = () => {
               size={"sm"}
               className="flex items-center gap-2 text-black"
             >
-              <CreditCardIcon className="size-4" />
+              <CreditCardIcon className="size-6" />
               <span className="hidden sm:inline">Billing</span>
             </Button>
           </Link>
@@ -60,11 +60,10 @@ const Navbar = () => {
         <Show when={"signed-in"}>
           <SignOutButton>
             <Button
-              variant="outline"
-              size="sm"
+              variant="outline" 
               className="flex items-center gap-2 text-black rounded-md"
             >
-              <LogOutIcon className="h-4 w-4" />
+              <LogOutIcon className="h-6 w-6" />
               <span className="hidden sm:inline">Log out</span>
             </Button>
           </SignOutButton>

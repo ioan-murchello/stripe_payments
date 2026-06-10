@@ -20,16 +20,18 @@ export default async function Home() {
         {courses.map((course: any) => (
           <li
             key={course._id}
-            className="border p-4 rounded mb-4 w-full max-w-md"
+            className="border p-4 rounded mb-4 w-full max-w-md min-h-0 flex flex-col gap-3"
           >
             <Image
+              width={640}
+              height={360}
               src={course.imageUrl}
               alt={course.title}
               className="w-full mb-2"
             />
             <h2 className="text-2xl font-semibold">{course.title}</h2>
             <p className="text-gray-600">{course.description}</p>
-            <p className="text-lg font-bold">${course.price.toFixed(2)}</p>
+            <p className="text-lg font-bold mt-auto">${course.price.toFixed(2)}</p>
           </li>
         ))}
       </ul>
