@@ -3,8 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import ConvexClientProvider from "./components/providers/ConvexClientProvider";
 import Navbar from "./components/Navbar";
-import { Toaster } from "sonner";
-import Stripe from "stripe";
+import { Toaster } from "sonner"; 
 import { StripeTestNotice } from "./components/StripeTestNotice";
 
 const inter = Inter({ subsets: ["latin"] });
